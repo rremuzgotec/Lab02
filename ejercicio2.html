@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navbar y Ejercicio2</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffb700;">
+            <a class="navbar-brand" style="margin-left: 2%;" href="ejercicio1.html" ><h1>LAB 02</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="ejercicio2.html">Ejercicio 2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="ejercicio3.html">Ejercicio 3</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="ejercicio4.html">Ejercicio 4</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="ejercicio5.html">Ejercicio 5</a>
+                </li>
+              </ul>
+            </div>
+         </nav>
+        <div class="container bg-warning-subtle p-5 rounded-5 text-dark mt-5" style="width: 25rem;">
+          <div class="text-center fs-1 fw-bold">Ejercicio 2</div>
+          <div class="container mt-4">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="num1" class="form-label">Número 1:</label>
+                <input type="number" class="form-control" id="numero1" required>
+              </div>
+              <div class="col-md-6">
+                <label for="num2" class="form-label">Número 2:</label>
+                <input type="number" class="form-control" id="numero2" required>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="num3" class="form-label">Número 3:</label>
+                <input type="number" class="form-control" id="numero3" required>
+              </div>
+              <div class="col-md-6">
+                <label for="num4" class="form-label">Número 4:</label>
+                <input type="number" class="form-control" id="numero4" required>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="button" class="btn btn-primary" onclick="calcular()">Calcular</button>
+            </div>
+            <div class="mt-4">
+              <div class="fw-bold">Suma 1er y 2do número:</div>
+              <div id="resultadoSuma" class="fs-4 text-center"></div>
+              <div class="fw-bold mt-3">Producto 3er y 4to número:</div>
+              <div id="resultadoProducto" class="fs-4 text-center"></div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function calcular() {
+            const n1 = parseFloat(document.getElementById("numero1").value);
+            const n2 = parseFloat(document.getElementById("numero2").value);
+            const n3 = parseFloat(document.getElementById("numero3").value);
+            const n4 = parseFloat(document.getElementById("numero4").value);
+      
+            const suma = n1 + n2;
+            const producto = n3 * n4;
+      
+            document.getElementById("resultadoSuma").textContent = suma;
+            document.getElementById("resultadoProducto").textContent = producto;
+          }
+        </script>
+    </body>
+</html>

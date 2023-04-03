@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 5</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #ffb700;">
+            <a class="navbar-brand" style="margin-left: 2%;" href="ejercicio1.html"><h1>LAB 02</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="ejercicio2.html">Ejercicio 2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="ejercicio3.html">Ejercicio 3</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="ejercicio4.html">Ejercicio 4</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="ejercicio5.html">Ejercicio 5</a>
+                </li>
+              </ul>
+            </div>
+         </nav>
+         <div class="container bg-warning-subtle rounded-5 mt-5 text-center" style="width: 500px;">
+            <h1>Ejercicio 5</h1>
+            <h5>Ingrese sus numeros para hallar el numero mayor:</h5>
+            <form>
+              <div class="form-group">
+                <label for="numero1">Número 1:</label>
+                <input type="number" class="form-control text-center" placeholder="Ingrese primer numero" id="numero1">
+              </div>
+              <div class="form-group">
+                <label for="numero2">Número 2:</label>
+                <input type="number" class="form-control text-center" placeholder="Ingrese segundo numero" id="numero2">
+              </div>
+              <div class="form-group">
+                <label for="numero3">Número 3:</label>
+                <input type="number" class="form-control text-center" placeholder="Ingrese tercer numero" id="numero3">
+              </div>
+              <button type="button" class="btn btn-primary mt-3" onclick="encontrarMayor()">Encontrar mayor</button>
+            </form>
+            <div id="resultado" class="mt-3"></div>
+          </div>
+
+        <script>
+          function encontrarMayor() {
+            var numero1 = parseFloat(document.getElementById("numero1").value);
+            var numero2 = parseFloat(document.getElementById("numero2").value);
+            var numero3 = parseFloat(document.getElementById("numero3").value);
+
+            if (numero1 >= numero2 && numero1 >= numero3) {
+                document.getElementById("resultado").innerHTML = "<div class='alert alert-success'>El número mayor es " + numero1 + "</div>";
+            } else if (numero2 >= numero1 && numero2 >= numero3) {
+                document.getElementById("resultado").innerHTML = "<div class='alert alert-success'>El número mayor es " + numero2 + "</div>";
+            } else {
+                document.getElementById("resultado").innerHTML = "<div class='alert alert-success'>El número mayor es " + numero3 + "</div>";
+            }
+            }
+        </script>
+    </body>
+</html>
